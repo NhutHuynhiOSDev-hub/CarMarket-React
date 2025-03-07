@@ -60,4 +60,4 @@ const CarCategories = [
   },
 ];
 
-export { CarModel, Pricing };
+export { CarModel, Pricing, CarCategories };
