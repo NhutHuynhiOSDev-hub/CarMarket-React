@@ -1,9 +1,9 @@
 import React from "react";
-import { FaGear } from "react-icons/fa6";
 import { IoIosSpeedometer } from "react-icons/io";
+import { RxOpenInNewWindow } from "react-icons/rx";
 import { BsFillFuelPumpFill } from "react-icons/bs";
 import { Separator } from "@/components/ui/separator";
-import { RxOpenInNewWindow } from "react-icons/rx";
+import { TbManualGearboxFilled } from "react-icons/tb";
 
 function CarItem({ car }) {
   return (
@@ -33,7 +33,8 @@ function CarItem({ car }) {
             <h2>{car.fuelType}</h2>
           </div>
           <div className="flex flex-col lg:flex-row items-center gap-2">
-            <FaGear />
+            <TbManualGearboxFilled />
+
             <h2>{car.gearType}</h2>
           </div>
         </div>
