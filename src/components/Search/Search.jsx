@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Select,
   SelectContent,
@@ -6,10 +7,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { IoSearch } from "react-icons/io5";
-import { Separator } from "@/components/ui/separator";
-
-import React from "react";
 import { CarModel, Pricing } from "@/data/Data";
+import { Separator } from "@/components/ui/separator";
 
 function Search() {
   return (

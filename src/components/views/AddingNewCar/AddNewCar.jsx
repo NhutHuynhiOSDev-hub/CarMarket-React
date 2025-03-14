@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import Header from "@/lib/header/Header";
-import TextArea from "./Fields/TextArea";
-import InputField from "./Fields/InputField";
-import DropdownField from "./Fields/DropdownField";
-import Features from "../data/Features.json";
-import FormElements from "../data/FormElements.json";
+import Header from "@/components/Header/Header";
+import TextArea from "../../Fields/TextArea";
+import InputField from "../../Fields/InputField";
+import DropdownField from "../../Fields/DropdownField";
+import Features from "../../../data/Features.json";
+import FormElements from "../../../data/FormElements.json";
 
-import { Button } from "./Button";
+import { Button } from "../../Button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Separator } from "@/components/ui/separator";
 
-function AddNewProduct() {
+function AddNewCar() {
   const [formData, setFormData] = useState();
   const handleInputChange = (name, value) => {
     setFormData((prevData) => ({ ...prevData, [name]: value }));
@@ -90,4 +90,4 @@ function AddNewProduct() {
   );
 }
 
-export default AddNewProduct;
+export default AddNewCar;

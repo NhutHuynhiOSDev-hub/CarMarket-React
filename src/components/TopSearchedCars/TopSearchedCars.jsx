@@ -1,5 +1,4 @@
 import React from "react";
-import CarItem from "@/components/CarItem";
 import { DummyCarsList } from "@/data/FakerData";
 import {
   Carousel,
@@ -8,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import CarItem from "../CarItem/CarItem";
 
 function TopSearchedCars() {
   return (

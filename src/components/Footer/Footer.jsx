@@ -1,6 +1,6 @@
 import React from "react";
 
-const Footer = () => {
+function Footer() {
   return (
     <footer className="bg-black lg:grid lg:grid-cols-5">
       <div className="relative block h-32 lg:col-span-2 lg:h-full">
@@ -280,6 +280,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
+}
 
 export default Footer;

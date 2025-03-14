@@ -1,7 +1,8 @@
 import React from "react";
-import Header from "../header/Header";
-import { Button } from "@/components/Button";
+import Header from "../Header/Header";
+
 import { Link } from "react-router";
+import { Button } from "@/components/Button";
 
 function Profile() {
   return (

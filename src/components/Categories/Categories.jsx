@@ -1,7 +1,6 @@
-import { CarCategories } from "@/data/Data";
 import React from "react";
-
-const Categories = () => {
+import { CarCategories } from "@/data/Data";
+function Categories() {
   return (
     <div>
       <h2 className="font-bold text-3xl text-center py-20">
@@ -20,6 +19,6 @@ const Categories = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Categories;
