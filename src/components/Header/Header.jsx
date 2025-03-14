@@ -7,8 +7,10 @@ function Header() {
   const { isSignedIn } = useUser();
 
   return (
-    <div className="flex justify-between items-center py-5 px-10 shadow-sm">
-      <img src="vite.svg" className="logo" alt="logo" />
+    <div className="flex justify-between items-center py-5 px-20 shadow-sm">
+      <Link to={"/"}>
+        <img src="vite.svg" className="logo" alt="logo" />
+      </Link>
       <ul className="hidden md:flex gap-16">
         <li className="font-medium hover:scale-110 hover:text-gray-400 transition-all cursor-pointer hover:text-primary">
           Home
@@ -32,9 +34,9 @@ function Header() {
           </Link>
         </div>
       ) : (
-        <SignInButton mode="modal" forceRedirectUrl="/">
+        <Link to="/login">
           <Button>Login</Button>
-        </SignInButton>
+        </Link>
       )}
     </div>
   );
