@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../header/Header";
-import Hero from "../../components/ui/Hero";
+import Hero from "../../components/Hero";
 import Categories from "../categories/Categories";
 import TopSearchedCars from "../topSearchedCars/TopSearchedCars";
 import Info from "../info/Info";

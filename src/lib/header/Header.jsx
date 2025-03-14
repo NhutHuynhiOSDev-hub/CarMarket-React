@@ -1,9 +1,11 @@
-import { Button } from "@/components/ui/Button";
-import { UserButton, useUser } from "@clerk/clerk-react";
+import { Button } from "@/components/Button";
+import { Link } from "react-router";
+import { SignInButton, UserButton, useUser } from "@clerk/clerk-react";
 import React from "react";
 
 function Header() {
-  const { isSigned } = useUser();
+  const { isSignedIn } = useUser();
+
   return (
     <div className="flex justify-between items-center py-5 px-10 shadow-sm">
       <img src="vite.svg" className="logo" alt="logo" />
@@ -22,13 +24,17 @@ function Header() {
         </li>
       </ul>
 
-      {isSigned ? (
+      {isSignedIn ? (
         <div className="flex items-center gap-5 ">
           <UserButton />
-          <Button>Submit</Button>
+          <Link to="/profile">
+            <Button>My Profile</Button>
+          </Link>
         </div>
       ) : (
-        <Button>Login</Button>
+        <SignInButton mode="modal" forceRedirectUrl="/">
+          <Button>Login</Button>
+        </SignInButton>
       )}
     </div>
   );

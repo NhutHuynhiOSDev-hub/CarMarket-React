@@ -22,28 +22,28 @@ function CarItem({ car }) {
 
       <div className="p-4">
         <h2 className="font-bold text-lg text-white mt-4"> {car.name}</h2>
-        <Separator className="bg-gray-400 my-4 h" />
+        <Separator className="bg-gray-400 my-4" />
         <div className="grid grid-cols-3 gap-2">
           <div className="flex flex-col lg:flex-row items-center gap-2">
             <BsFillFuelPumpFill />
-            <h2>{car.miles}</h2>
+            <h2 className="text-xs text-center md:text-ms">{car.miles}</h2>
           </div>
           <div className="flex flex-col lg:flex-row items-center gap-2">
             <IoIosSpeedometer />
-            <h2>{car.fuelType}</h2>
+            <h2 className="text-xs text-center md:text-ms">{car.fuelType}</h2>
           </div>
           <div className="flex flex-col lg:flex-row items-center gap-2">
             <TbManualGearboxFilled />
 
-            <h2>{car.gearType}</h2>
+            <h2 className="text-xs text-center md:text-ms">{car.gearType}</h2>
           </div>
         </div>
         <Separator className="bg-gray-400 my-4" />
         <div className="flex items-center justify-between gap-2">
           <h2 className="font-bold text-xl">${car.price}</h2>
-          <h2 className="text-sm flex flex-row items-center gap-2">
+          <h2 className="text-xs md:text-sm font-semibold flex flex-row items-center gap-2">
             {" "}
-            <RxOpenInNewWindow /> View Details
+            <RxOpenInNewWindow /> Details
           </h2>
         </div>
       </div>

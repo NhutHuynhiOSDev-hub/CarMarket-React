@@ -8,7 +8,9 @@ function Hero() {
         <h2 className="text-lg">
           Find cars for sale and cars for rent near you
         </h2>
-        <h2 className="text-[60px] font-bold">Find Your Dream Cars</h2>
+        <h2 className="text-[60px] font-bold text-center">
+          Find Your Dream Cars
+        </h2>
         <Search />
         <img src="/src/assets/images/tesla.png" className="mt-10" />
       </div>

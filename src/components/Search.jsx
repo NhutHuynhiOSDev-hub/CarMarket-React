@@ -30,7 +30,9 @@ function Search() {
         </SelectTrigger>
         <SelectContent className="bg-[#1a1a1a] border-none">
           {CarModel.map((item, index) => (
-            <SelectItem value={index}>{item.brand}</SelectItem>
+            <SelectItem key={index} value={index}>
+              {item.brand}
+            </SelectItem>
           ))}
         </SelectContent>
       </Select>
@@ -41,7 +43,9 @@ function Search() {
         </SelectTrigger>
         <SelectContent className="bg-[#1a1a1a] border-none">
           {Pricing.map((item, index) => (
-            <SelectItem value={index}>{item.amount}</SelectItem>
+            <SelectItem key={index} value={index}>
+              {item.amount}
+            </SelectItem>
           ))}
         </SelectContent>
       </Select>

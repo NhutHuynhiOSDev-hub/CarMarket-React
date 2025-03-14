@@ -1,5 +1,5 @@
 import React from "react";
-import CarItem from "@/components/ui/CarItem";
+import CarItem from "@/components/CarItem";
 import { DummyCarsList } from "@/data/FakerData";
 import {
   Carousel,
@@ -18,8 +18,11 @@ function TopSearchedCars() {
 
       <Carousel className="px-20">
         <CarouselContent>
-          {DummyCarsList.map((item) => (
-            <CarouselItem className="basis-1/2 md:basis-1/3 lg:basis-1/4">
+          {DummyCarsList.map((item, index) => (
+            <CarouselItem
+              key={index}
+              className="basis-1/2 md:basis-1/3 lg:basis-1/4"
+            >
               <CarItem car={item} />
             </CarouselItem>
           ))}

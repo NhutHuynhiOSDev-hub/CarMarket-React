@@ -34,7 +34,7 @@ const CarCategories = [
   },
   {
     id: 5,
-    name: "Pickup",
+    name: "Truck",
     icon: "/src/assets/images/pickup.png",
   },
   {
