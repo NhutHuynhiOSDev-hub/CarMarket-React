@@ -3,6 +3,7 @@ import { faker } from "@faker-js/faker";
 function CreateDummyList() {
   return {
     name: faker.vehicle.vehicle(),
+    brand: faker.vehicle.manufacturer(),
     model: faker.vehicle.model(),
     fuelType: faker.vehicle.fuel(),
     type: faker.vehicle.type(),
@@ -13,6 +14,7 @@ function CreateDummyList() {
     createBy: "nhuthq@zigexn.vn",
     createdAt: faker.date.past(),
     updatedAt: faker.date.recent(),
+
     justArrived: faker.datatype.boolean(),
     inStock: faker.datatype.boolean(),
     price: faker.finance.amount(100000, 500000, 0),
@@ -20,5 +22,5 @@ function CreateDummyList() {
 }
 
 export const DummyCarsList = faker.helpers.multiple(CreateDummyList, {
-  count: 7,
+  count: 30,
 });

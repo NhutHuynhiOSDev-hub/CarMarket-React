@@ -13,9 +13,11 @@ function Header() {
         <img src="vite.svg" className="logo" alt="logo" />
       </Link>
       <ul className="hidden md:flex gap-16">
-        <li className="font-medium hover:scale-110 hover:text-gray-400 transition-all cursor-pointer hover:text-primary">
-          Home
-        </li>
+        <Link to={"/"}>
+          <li className="font-medium hover:scale-110 hover:text-gray-400 transition-all cursor-pointer hover:text-primary">
+            Home
+          </li>
+        </Link>
         <li className="font-medium hover:scale-110 hover:text-gray-400 transition-all cursor-pointer hover:text-primary">
           Search
         </li>

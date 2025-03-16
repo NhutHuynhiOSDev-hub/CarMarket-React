@@ -5,10 +5,10 @@ const CarModel = [
 ];
 
 const Pricing = [
-  { id: 1, amount: "$1000" },
-  { id: 2, amount: "$15000" },
-  { id: 3, amount: "$20000" },
-  { id: 4, amount: "$25000" },
+  { id: 1, amount: 10000 },
+  { id: 2, amount: 50000 },
+  { id: 3, amount: 100000 },
+  { id: 4, amount: 500000 },
 ];
 
 const CarCategories = [

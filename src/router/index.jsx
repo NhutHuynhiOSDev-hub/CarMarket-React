@@ -4,7 +4,9 @@ import Profile from "@/components/Profile";
 import Home from "@/components/views/Home";
 import Register from "@/components/Register";
 import AddNewCar from "@/components/views/AddingNewCar";
+import SearchByOptions from "@/components/views/Search";
 import ForgotPassword from "@/components/ForgotPassword";
+import SearchByCategory from "@/components/views/Search/[category]";
 import {
   Route,
   createBrowserRouter,
@@ -20,6 +22,8 @@ const routes = createBrowserRouter(
       <Route path="/profile" element={<Profile />} />
       <Route path="/register" element={<Register />} />
       <Route path="/add-new-car" element={<AddNewCar />} />
+      <Route path="/search/" element={<SearchByOptions />} />
+      <Route path="/search/:category" element={<SearchByCategory />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
     </Route>
   )

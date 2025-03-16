@@ -1,5 +1,5 @@
 import React from "react";
-import Search from "../Search";
+import SearchBar from "../SearchBar";
 
 function Hero() {
   return (
@@ -11,7 +11,7 @@ function Hero() {
         <h2 className="text-[60px] font-bold text-center">
           Find Your Dream Cars
         </h2>
-        <Search />
+        <SearchBar />
         <img src="/src/assets/images/tesla.png" className="mt-10" />
       </div>
     </div>

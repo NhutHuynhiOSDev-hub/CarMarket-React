@@ -9,9 +9,11 @@ function CarItem({ car }) {
   return (
     <div className="bg-[#343131] rounded-xl w-full flex flex-col justify-between hover:scale-95 transition-all cursor-pointer">
       <div className="relative overflow-hidden">
-        <div className="absolute right-[-24px] top-2 w-24 h-8 bg-gray-700 text-white text-center text-sm font-bold transform rotate-45  flex items-center justify-center">
-          New
-        </div>
+        {car.isNew && (
+          <div className="absolute right-[-24px] top-2 w-24 h-8 bg-gray-700 text-white text-center text-sm font-bold transform rotate-45  flex items-center justify-center">
+            New
+          </div>
+        )}
         <img
           src={car.image}
           height={250}
