@@ -7,7 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import CarItem from "../CarItem/CarItem";
+import CarItem from "../CarItem";
 
 function TopSearchedCars() {
   return (

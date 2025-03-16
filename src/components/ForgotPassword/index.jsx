@@ -36,7 +36,7 @@ function ForgotPassword() {
 
             <p className="text-center">
               Back to{" "}
-              <Link to="/register">
+              <Link to="/login">
                 <span>Login</span>
               </Link>
             </p>

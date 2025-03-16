@@ -20,7 +20,12 @@ import {
 } from "firebase/storage";
 import {
   getAuth,
+  signOut,
+  updatePassword,
+  signInWithPopup,
+  GoogleAuthProvider,
   onAuthStateChanged,
+  sendEmailVerification,
   sendPasswordResetEmail,
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
@@ -38,11 +43,11 @@ const firebaseConfig = {
   measurementId: "G-YM1NB5GYDZ",
 };
 
-// FireAuth
-const firebaseAuth = getAuth();
-
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
+
+// FireAuth
+const firebaseAuth = getAuth();
 
 // FireStore
 const firestoreDB = getFirestore(firebaseApp);
@@ -65,14 +70,19 @@ export {
   getDoc,
   setDoc,
   getDocs,
+  signOut,
   deleteDoc,
   updateDoc,
   collection,
   uploadBytes,
   deleteObject,
   getDownloadURL,
+  updatePassword,
+  signInWithPopup,
   onAuthStateChanged,
+  sendEmailVerification,
   sendPasswordResetEmail,
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
+  GoogleAuthProvider,
 };
