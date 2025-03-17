@@ -12,6 +12,7 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router";
+import CarDetails from "@/components/views/CarDetails/[id]";
 
 const routes = createBrowserRouter(
   createRoutesFromElements(
@@ -23,8 +24,9 @@ const routes = createBrowserRouter(
       <Route path="/register" element={<Register />} />
       <Route path="/add-new-car" element={<AddNewCar />} />
       <Route path="/search/" element={<SearchByOptions />} />
-      <Route path="/search/:category" element={<SearchByCategory />} />
+      <Route path="/car/:car_id" element={<CarDetails />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
+      <Route path="/search/:category" element={<SearchByCategory />} />
     </Route>
   )
 );

@@ -8,6 +8,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import CarItem from "../CarItem";
+import { Link } from "react-router";
 
 function TopSearchedCars() {
   return (
@@ -23,7 +24,9 @@ function TopSearchedCars() {
               key={index}
               className="basis-1/2 md:basis-1/3 lg:basis-1/4"
             >
-              <CarItem car={item} />
+              <Link to={`/car/${item.name}`}>
+                <CarItem car={item} />p
+              </Link>
             </CarouselItem>
           ))}
         </CarouselContent>

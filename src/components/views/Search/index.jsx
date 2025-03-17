@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import SearchBar from "@/components/SearchBar";
 import { DummyCarsList } from "@/data/FakerData";
 import React from "react";
-import { useSearchParams } from "react-router";
+import { Link, useSearchParams } from "react-router";
 
 function SearchByOptions() {
   const [searchParams] = useSearchParams();
@@ -26,7 +26,9 @@ function SearchByOptions() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {filterList.length > 0
             ? filterList.map((item, index) => (
-                <CarItem key={index} car={item} />
+                <Link to={`/car/${item.name}`}>
+                  <CarItem key={index} car={item} />
+                </Link>
               ))
             : [1, 2, 3, 4, 5, 6].map(() => (
                 <div className="h-[200px] rounded-xl bg-gray-500 animate-pulse"></div>
