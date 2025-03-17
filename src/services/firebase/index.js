@@ -53,7 +53,10 @@ const firebaseAuth = getAuth();
 const firestoreDB = getFirestore(firebaseApp);
 
 // Storage
-const firebaseStorage = getStorage(firebaseApp);
+const firebaseStorage = getStorage(
+  firebaseApp,
+  "gs://car-market-8f22c.firebasestorage.app"
+);
 
 // Analytics
 const firebaseAnalytics = getAnalytics(firebaseApp);

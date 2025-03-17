@@ -9,9 +9,11 @@ import FormElements from "../../../data/FormElements.json";
 import { Button } from "../../Button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Separator } from "@/components/ui/separator";
+import UploadImages from "./components/UploadImages";
 
 function AddNewCar() {
   const [formData, setFormData] = useState();
+  const [triggerUploadFeatureImage, setTriggerUploadFeatureImage] = useState();
   const handleInputChange = (name, value) => {
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
@@ -25,7 +27,7 @@ function AddNewCar() {
     <div>
       <Header />
       <div className="p-10">
-        <h2 className="font-bold text-4xl">Add New Product</h2>
+        <h2 className="font-bold text-4xl">Add New Car</h2>
         <form className="p-10 border rounded-md mt-10">
           {/* Car details */}
           <div>
@@ -74,6 +76,8 @@ function AddNewCar() {
             </div>
           </div>
           {/* Car image */}
+          <Separator className="bg-gray-400 my-8" />
+          <UploadImages triggerUploadFeatureImage={triggerUploadFeatureImage} />
           <div className="my-10 flex justify-end">
             <Button
               // type="submit"
