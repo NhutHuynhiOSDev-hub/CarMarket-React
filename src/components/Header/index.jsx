@@ -8,7 +8,7 @@ function Header() {
   const { userLoggedIn } = useAuth();
 
   return (
-    <div className="flex justify-between items-center py-5 px-20 shadow-sm">
+    <div className="flex justify-between items-center px-10 md:px-20 py-5 shadow-sm">
       <Link to={"/"}>
         <img src="vite.svg" className="logo" alt="logo" />
       </Link>

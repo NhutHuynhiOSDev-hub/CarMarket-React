@@ -1,28 +1,31 @@
 import React from "react";
 import Header from "../Header";
-
-import { Link } from "react-router";
-import { Button } from "@/components/Button";
-import { doSignOut } from "@/services/firebase/auth";
-import { useAuth } from "@/context";
+import MyProfile from "./components/MyProfile";
+import MyProducts from "./components/MyProducts";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Inbox from "./components/Inbox";
 
 function Profile() {
-  const { currentUser } = useAuth();
-  const onLogout = () => {
-    doSignOut();
-  };
   return (
     <div>
       <Header />
-      <div className="p-10">
-        <div className="flex items-center justify-between">
-          <div className="flex flex-row items-center justify-between gap-4">
-            <Link to={"/add-new"}>
-              <Button>+ Add New Product</Button>
-            </Link>
-            <Button onClick={onLogout}>Log out</Button>
-          </div>
-        </div>
+      <div className="p-5 px-10 md:px-20 w-screen h-screen">
+        <Tabs defaultValue="myProduct" className="w-full h-full bg-amber-600">
+          <TabsList className="grid w-full grid-cols-3">
+            <TabsTrigger value="myProduct">My Products</TabsTrigger>
+            <TabsTrigger value="inbox">Inbox</TabsTrigger>
+            <TabsTrigger value="myProfile">My Profile</TabsTrigger>
+          </TabsList>
+          <TabsContent value="myProduct">
+            <MyProducts />
+          </TabsContent>
+          <TabsContent value="inbox">
+            <Inbox />
+          </TabsContent>
+          <TabsContent value="myProfile">
+            <MyProfile />
+          </TabsContent>
+        </Tabs>
       </div>
     </div>
   );
