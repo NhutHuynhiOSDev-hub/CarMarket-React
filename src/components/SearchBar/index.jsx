@@ -19,7 +19,7 @@ function SearchBar() {
   return (
     <div className="flex flex-col md:flex-row gap-10 p-5 my-16 w-[60%] bg-[#1a1a1a] rounded-md md:rounded-full items-center">
       <Select onValueChange={(value) => setIsNew(value)}>
-        <SelectTrigger className="w-full text-lg shadow-none outline-none md:border-non">
+        <SelectTrigger className="w-full text-lg shadow-none border-2 border-white md:border-none">
           <SelectValue placeholder="Cars" />
         </SelectTrigger>
         <SelectContent className="bg-[#1a1a1a] border-none">
@@ -28,7 +28,7 @@ function SearchBar() {
         </SelectContent>
       </Select>
       <Select onValueChange={(value) => setBrand(value)}>
-        <SelectTrigger className="outline-none md:border-none w-full text-lg shadow-none">
+        <SelectTrigger className="w-full text-lg shadow-none border-2 border-white md:border-none">
           <SelectValue placeholder="Brand" />
         </SelectTrigger>
         <SelectContent className="bg-[#1a1a1a] border-none">
@@ -40,7 +40,7 @@ function SearchBar() {
         </SelectContent>
       </Select>
       <Select onValueChange={(value) => setPrice(value)}>
-        <SelectTrigger className="outline-none md:border-none w-full text-lg shadow-none">
+        <SelectTrigger className="w-full text-lg shadow-none border-2 border-white md:border-none">
           <SelectValue placeholder="Price" />
         </SelectTrigger>
         <SelectContent className="bg-[#1a1a1a] border-none">
