@@ -5,13 +5,13 @@ import { Button } from "../ui/button";
 
 function ForgotPassword() {
   return (
-    <div>
+    <div className="w-full h-full bg-black">
       <div className="absolute mt-5 ml-20">
         <Link to={"/"}>
           <img src="vite.svg" className="logo" alt="logo" />
         </Link>
       </div>
-      <div className="w-full h-screen bg-black flex flex-col items-center md:flex-row">
+      <div className="flex flex-col items-center md:flex-row">
         <div className="absolute md:relative w-full md:w-1/2 xl:w-1/3 flex-col md:flex-row p-20 mt-20">
           <div className="w-full flex flex-col">
             <h1 className="text-2xl text-center md:text-start text-white font-bold mb-4">
@@ -53,7 +53,7 @@ function ForgotPassword() {
 
         <img
           src="https://wallpapers.com/images/hd/black-car-4k-kj2vhoesglkyx4a4.jpg"
-          className="w-full h-full md:w-1/2 xl:w-2/3 object-cover"
+          className="w-full h-screen md:w-1/2 xl:w-2/3 object-cover"
         />
       </div>
     </div>

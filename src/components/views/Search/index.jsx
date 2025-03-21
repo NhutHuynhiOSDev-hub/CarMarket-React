@@ -16,7 +16,7 @@ function SearchByOptions() {
   );
 
   return (
-    <section className="w-full bg-black">
+    <div className="w-full h-full bg-black">
       <Header />
       <div className="flex text-white flex-col items-center justify-center pt-10 md:pt-30 gap-6">
         <SearchBar />
@@ -35,7 +35,7 @@ function SearchByOptions() {
               ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 

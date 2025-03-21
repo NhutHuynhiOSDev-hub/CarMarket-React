@@ -13,14 +13,12 @@ import FinancialCalculator from "../components/FinancialCalculator";
 function CarDetails() {
   const carDetails = DummyCarDetails;
 
-  console.log("DETAILS: ", carDetails);
-
   return (
-    <div>
+    <div className="w-full h-full bg-black">
       <Header />
-      <div className="p-10 md:p-20">
+      <div className="py-10 px-10 md:px-20">
         <DetailsHeader carDetails={carDetails[0]} />
-        <div className="grid w-full grid-cols-1 md:grid-cols-3 mt-10 gap-5">
+        <div className="grid w-full grid-cols-1 md:grid-cols-3 gap-5 md:gap-10">
           <div className="col-span-2">
             <DetailsImage />
             <DetailsDescription carDetails={carDetails[0]} />

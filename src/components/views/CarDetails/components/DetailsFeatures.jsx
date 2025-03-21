@@ -7,13 +7,13 @@ const DetailsFeatures = ({ carDetails }) => {
       {carDetails.features.features.length > 0 ? (
         <div className="mt-10">
           <h2 className="font-medium text-2xl">Features</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-5 mt-3">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-5 mt-4">
             {carDetails.features.features.map((item, index) => (
               <div
                 key={index}
                 className="flex flex-row gap-2 items-center  justify-start"
               >
-                <FaCheck className="text-lg p-1 rounded-full bg-amber-600" />
+                <FaCheck className="text-lg p-1 rounded-full bg-green-900" />
                 <p className="line-clamp-1">{item.label}</p>
               </div>
             ))}

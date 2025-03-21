@@ -33,13 +33,13 @@ function Login() {
   };
 
   return (
-    <>
+    <div className="w-full h-full bg-black">
       <div className="absolute mt-5 ml-20">
         <Link to={"/"}>
           <img src="vite.svg" className="logo" alt="logo" />
         </Link>
       </div>
-      <div className="w-full h-screen bg-black flex flex-col md:flex-row">
+      <div className="flex flex-col md:flex-row">
         <div className="absolute md:relative w-full md:w-1/2 xl:w-1/3 flex-col md:flex-row p-20 mt-20">
           <div className="w-full flex flex-col items-start">
             <h1 className="text-2xl text-center md:text-start text-white font-bold mb-4">
@@ -102,10 +102,10 @@ function Login() {
 
         <img
           src="https://www.pixelstalk.net/wp-content/uploads/images6/Black-Wallpaper-4K-Wallpaper-Car.jpg"
-          className="w-full h-full md:w-1/2 xl:w-2/3 object-cover"
+          className="w-full md:w-1/2 xl:w-2/3 object-cover"
         />
       </div>
-    </>
+    </div>
   );
 }
 

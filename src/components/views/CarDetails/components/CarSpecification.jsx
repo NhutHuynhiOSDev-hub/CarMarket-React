@@ -4,15 +4,15 @@ import { IoInformationCircle } from "react-icons/io5";
 
 function CarSpecification({ carDetails }) {
   return (
-    <div className="p-5 mt-10">
-      <h2 className="font-medium text-2xl">Ownder Details</h2>
+    <div className="mt-10">
+      <h2 className="font-medium text-2xl mb-4">Specifications</h2>
       {CarSpecificationJSON.map((item, index) => (
         <div
           key={index}
           className="flex flex-row items-center justify-between mt-2"
         >
           <div className="flex flex-row gap-2 items-center ">
-            <IoInformationCircle />
+            <IoInformationCircle className=" text-white" />
             <h2>{item.label}</h2>
           </div>
           <h2>{carDetails[item.name]}</h2>
