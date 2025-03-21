@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 function DesktopNav() {
   const { userLoggedIn } = useAuth();
   return (
-    <div className="w-full hidden md:flex shadow-s">
+    <div className="w-full hidden md:flex items-center justify-between shadow-s">
       <ul className="w-full hidden md:flex items-center justify-center gap-16">
         <Link to={"/"}>
           <li className="font-medium hover:scale-110 hover:text-gray-400 transition-all cursor-pointer hover:text-primary">
@@ -33,7 +33,7 @@ function DesktopNav() {
           <Link to="/login">
             <Button
               className={
-                "font-semibold hover:scale-110 hover:text-gray-400 text-white bg-[#1a1a1a]"
+                "font-medium text-sm hover:scale-110 hover:text-gray-400 text-white bg-[#1a1a1a]"
               }
             >
               Login

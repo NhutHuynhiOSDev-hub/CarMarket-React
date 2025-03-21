@@ -11,7 +11,7 @@ function MobileNav() {
   const [isShowMenu, setIsShowMenu] = useState(false);
 
   return (
-    <div>
+    <div className="md:hidden">
       <div className="relative w-8 h-8 flex items-center justify-center">
         <motion.div
           className="relative"

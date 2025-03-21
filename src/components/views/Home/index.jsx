@@ -11,8 +11,8 @@ function Home() {
     <div className="w-full h-full bg-black">
       <Header />
       <Hero />
-      {/* <Categories /> */}
-      {/* <TopSearchedCars /> */}
+      <Categories />
+      <TopSearchedCars />
       {/* <Info /> */}
       <Footer />
     </div>

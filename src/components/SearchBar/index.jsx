@@ -17,7 +17,7 @@ function SearchBar() {
   const [price, setPrice] = useState(null);
 
   return (
-    <div className="flex flex-col md:flex-row gap-10 p-5 w-[60%] bg-[#1a1a1a] rounded-md md:rounded-full items-center">
+    <div className="flex flex-col md:flex-row gap-10 p-5 my-16 w-[60%] bg-[#1a1a1a] rounded-md md:rounded-full items-center">
       <Select onValueChange={(value) => setIsNew(value)}>
         <SelectTrigger className="w-full text-lg shadow-none outline-none md:border-non">
           <SelectValue placeholder="Cars" />
