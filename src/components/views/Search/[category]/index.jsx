@@ -12,14 +12,14 @@ function SearchByCategory() {
   );
 
   return (
-    <div>
+    <section className="w-full bg-black">
       <Header />
-      <div className="w-ful flex flex-col items-center justify-center  p-10 py-20 gap-6">
+      <div className="flex text-white flex-col items-center justify-center pt-10 md:pt-30 gap-6">
         <SearchBar />
       </div>
-      <div className="p-20">
-        <h2 className="font-bold text-4xl mb-10">{category}</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="px-10 md:px-20">
+        <h2 className="font-bold text-4xl">{category}</h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 pt-10 pb-20">
           {filterList.length > 0
             ? filterList.map((item, index) => (
                 <Link to={`/car/${item.name}`}>
@@ -31,7 +31,7 @@ function SearchByCategory() {
               ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

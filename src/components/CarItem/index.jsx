@@ -7,7 +7,7 @@ import { TbManualGearboxFilled } from "react-icons/tb";
 
 function CarItem({ car }) {
   return (
-    <div className="w-full bg-gray-900 flex flex-col justify-between hover:scale-95 rounded-xl transition-all cursor-pointer">
+    <div className="w-full bg-[#1a1a1a] flex flex-col justify-between rounded-xl hover:bg-gray-900 transition-all duration-300 cursor-pointer">
       <div className="relative overflow-hidden">
         {car.isNew && (
           <div className="absolute right-[-24px] top-2 w-24 h-8 bg-gray-700 text-white text-center text-sm font-bold transform rotate-45  flex items-center justify-center">

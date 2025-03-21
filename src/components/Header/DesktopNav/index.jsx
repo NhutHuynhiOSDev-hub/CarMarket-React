@@ -27,13 +27,19 @@ function DesktopNav() {
       <div>
         {userLoggedIn ? (
           <Link to="/profile">
-            <Button>My Profile</Button>
+            <Button
+              className={
+                "font-medium w-full h-[40px] text-sm hover:bg-gray-900 transition-all duration-300 text-white bg-[#1a1a1a]"
+              }
+            >
+              My Profile
+            </Button>
           </Link>
         ) : (
           <Link to="/login">
             <Button
               className={
-                "font-medium text-sm hover:scale-110 hover:text-gray-400 text-white bg-[#1a1a1a]"
+                "font-medium w-full h-[40px] text-sm hover:bg-gray-900 transition-all duration-300 text-white bg-[#1a1a1a]"
               }
             >
               Login
