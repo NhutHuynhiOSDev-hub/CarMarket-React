@@ -3,7 +3,7 @@ import SearchBar from "../SearchBar";
 
 function Hero() {
   return (
-    <div className="w-full bg-black mt-20 px-10 md:px-20">
+    <section className="w-full bg-black mt-20 px-10 md:px-20">
       <div className="flex text-white flex-col items-center justify-center py-10 md:py-30 gap-6">
         <h2 className="text-lg">Driven by Quality, Powered by Trust.</h2>
         <h2 className="text-[60px] font-bold text-center">
@@ -12,7 +12,7 @@ function Hero() {
         <SearchBar />
         <img src="/src/assets/images/tesla.png" className="mb-10" />
       </div>
-    </div>
+    </section>
   );
 }
 

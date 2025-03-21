@@ -2,13 +2,13 @@ import React from "react";
 
 function Info() {
   return (
-    <section>
-      <div className="mx-auto py-20 px-10 sm:px-6 lg:px-8">
+    <section className="w-full bg-black my-20 px-10 md:px-20">
+      <div className="mx-auto">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-4 md:items-center md:gap-8">
           <div className="md:col-span-3">
             <img
               src="https://wallpapercat.com/w/full/8/6/c/1647841-3840x2160-desktop-4k-land-rover-defender-background.jpg"
-              className="rounded-r-xl"
+              className="rounded-xl"
               alt="image"
             />
           </div>

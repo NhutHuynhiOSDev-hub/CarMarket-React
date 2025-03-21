@@ -13,7 +13,7 @@ function Home() {
       <Hero />
       <Categories />
       <TopSearchedCars />
-      {/* <Info /> */}
+      <Info />
       <Footer />
     </div>
   );
