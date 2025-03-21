@@ -8,7 +8,7 @@ function DesktopNav() {
   const { userLoggedIn } = useAuth();
   return (
     <div className="w-full hidden md:flex shadow-s">
-      <ul className="w-full hidden md:flex items-center justify-center  gap-16">
+      <ul className="w-full hidden md:flex items-center justify-center gap-16">
         <Link to={"/"}>
           <li className="font-medium hover:scale-110 hover:text-gray-400 transition-all cursor-pointer hover:text-primary">
             Home
@@ -31,7 +31,13 @@ function DesktopNav() {
           </Link>
         ) : (
           <Link to="/login">
-            <Button>Login</Button>
+            <Button
+              className={
+                "font-semibold hover:scale-110 hover:text-gray-400 text-white bg-[#1a1a1a]"
+              }
+            >
+              Login
+            </Button>
           </Link>
         )}
       </div>

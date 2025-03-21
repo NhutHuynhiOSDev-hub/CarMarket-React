@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import { Link } from "react-router";
+import { IoSearch } from "react-icons/io5";
+import { CarModel, Pricing } from "@/data/Data";
+import { Separator } from "@/components/ui/separator";
 import {
   Select,
   SelectContent,
@@ -6,10 +10,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { IoSearch } from "react-icons/io5";
-import { CarModel, Pricing } from "@/data/Data";
-import { Separator } from "@/components/ui/separator";
-import { Link } from "react-router";
 
 function SearchBar() {
   const [isNew, setIsNew] = useState(null);
@@ -17,7 +17,7 @@ function SearchBar() {
   const [price, setPrice] = useState(null);
 
   return (
-    <div className="flex flex-col md:flex-row gap-10 px-5 itemsce w-[60%] p-5 bg-[#1a1a1a] rounded-md md:rounded-full items-center">
+    <div className="flex flex-col md:flex-row gap-10 p-5 w-[60%] bg-[#1a1a1a] rounded-md md:rounded-full items-center">
       <Select onValueChange={(value) => setIsNew(value)}>
         <SelectTrigger className="w-full text-lg shadow-none outline-none md:border-non">
           <SelectValue placeholder="Cars" />
@@ -27,7 +27,6 @@ function SearchBar() {
           <SelectItem value={false}>Used</SelectItem>
         </SelectContent>
       </Select>
-      <Separator orientation="vertical" />
       <Select onValueChange={(value) => setBrand(value)}>
         <SelectTrigger className="outline-none md:border-none w-full text-lg shadow-none">
           <SelectValue placeholder="Brand" />
@@ -40,7 +39,6 @@ function SearchBar() {
           ))}
         </SelectContent>
       </Select>
-      <Separator orientation="vertical" />
       <Select onValueChange={(value) => setPrice(value)}>
         <SelectTrigger className="outline-none md:border-none w-full text-lg shadow-none">
           <SelectValue placeholder="Price" />

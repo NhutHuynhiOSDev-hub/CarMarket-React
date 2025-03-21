@@ -3,13 +3,11 @@ import SearchBar from "../SearchBar";
 
 function Hero() {
   return (
-    <div>
-      <div className="flex flex-col items-center justify-center w-ful p-10 py-20 gap-6">
-        <h2 className="text-lg">
-          Find cars for sale and cars for rent near you
-        </h2>
+    <div className="w-full bg-black my-20 px-10 md:px-20">
+      <div className="flex text-white flex-col items-center justify-center py-10 md:py-30 gap-6">
+        <h2 className="text-lg">Driven by Quality, Powered by Trust.</h2>
         <h2 className="text-[60px] font-bold text-center">
-          Find Your Dream Cars
+          Find Your Dream Car Today!
         </h2>
         <SearchBar />
         <img src="/src/assets/images/tesla.png" className="mt-10" />

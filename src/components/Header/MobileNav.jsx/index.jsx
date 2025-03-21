@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router";
 import { useAuth } from "@/context";
-import { motion, AnimatePresence } from "motion/react";
+import { motion } from "motion/react";
 import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 import { Button } from "@/components/ui/button";
@@ -25,6 +25,7 @@ function MobileNav() {
         <motion.div
           onClick={() => {
             setIsShowMenu(!isShowMenu);
+            console.log("HERE:", isShowMenu);
           }}
           className="absolute top-0 right-0"
           initial={{ opacity: 0 }}
@@ -36,8 +37,8 @@ function MobileNav() {
         </motion.div>
       </div>
       <div
-        className={`fixed bg-black border-white border-l-1 border-b-1 w-[200px] ${
-          isShowMenu ? "right-0" : "right-[-200px]"
+        className={`fixed bg-black border-white border-l-1 border-b-1  w-[300px] ${
+          isShowMenu ? "right-0" : "right-[-300px]"
         } shadow-sm top-22 right-0 pt-5 pb-10 px-10 md:px-20 md:hidden z-20 rounded-bl-2xl duration-300 ease-in-out overflow-hidden`}
       >
         <div className="flex flex-col justify-center items-center gap-8">
@@ -61,8 +62,14 @@ function MobileNav() {
                 <Button>My Profile</Button>
               </Link>
             ) : (
-              <Link to={"/login"}>
-                <Button>Login</Button>
+              <Link to="/login">
+                <Button
+                  className={
+                    "font-semibold hover:scale-110 hover:text-gray-400 text-white bg-[#1a1a1a]"
+                  }
+                >
+                  Login
+                </Button>
               </Link>
             )}
           </div>

@@ -8,9 +8,9 @@ import TopSearchedCars from "@/components/TopSearchedCars";
 
 function Home() {
   return (
-    <div>
+    <div className="w-full h-full bg-black">
       <Header />
-      {/* <Hero /> */}
+      <Hero />
       {/* <Categories /> */}
       {/* <TopSearchedCars /> */}
       {/* <Info /> */}
