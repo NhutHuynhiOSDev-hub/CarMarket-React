@@ -1,43 +1,16 @@
-import React from "react";
+import DesktopNav from "./DesktopNav";
+import MobileNav from "./MobileNav.jsx";
 
 import { Link } from "react-router";
-import { useAuth } from "@/context";
-import { Button } from "@/components/Button";
 
 function Header() {
-  const { userLoggedIn } = useAuth();
-
   return (
-    <div className="flex justify-between items-center px-10 md:px-20 py-5 shadow-sm">
+    <div className="fixed bg-black w-full flex justify-between items-center shadow-sm px-10 md:px-20 py-5 z-20">
       <Link to={"/"}>
         <img src="vite.svg" className="logo" alt="logo" />
       </Link>
-      <ul className="hidden md:flex gap-16">
-        <Link to={"/"}>
-          <li className="font-medium hover:scale-110 hover:text-gray-400 transition-all cursor-pointer hover:text-primary">
-            Home
-          </li>
-        </Link>
-        <li className="font-medium hover:scale-110 hover:text-gray-400 transition-all cursor-pointer hover:text-primary">
-          Search
-        </li>
-        <li className="font-medium hover:scale-110 hover:text-gray-400 transition-all cursor-pointer hover:text-primary">
-          News
-        </li>
-        <li className="font-medium hover:scale-110 hover:text-gray-400 transition-all cursor-pointer hover:text-primary">
-          Preorder
-        </li>
-      </ul>
-
-      {userLoggedIn ? (
-        <Link to="/profile">
-          <Button>My Profile</Button>
-        </Link>
-      ) : (
-        <Link to="/login">
-          <Button>Login</Button>
-        </Link>
-      )}
+      <DesktopNav />
+      <MobileNav />
     </div>
   );
 }

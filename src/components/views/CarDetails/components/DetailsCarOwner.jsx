@@ -1,4 +1,4 @@
-import { Button } from "@/components/Button";
+import Button from "@/components/Button";
 import { createSendbirdChannel, createSendbirdUser } from "@/services/sendbird";
 import React from "react";
 

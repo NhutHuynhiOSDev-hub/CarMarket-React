@@ -6,10 +6,10 @@ import DropdownField from "../../Fields/DropdownField";
 import Features from "../../../data/Features.json";
 import FormElements from "../../../data/FormElements.json";
 
-import { Button } from "../../Button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Separator } from "@/components/ui/separator";
 import UploadImages from "./components/UploadImages";
+import Button from "@/components/Button";
 
 function AddNewCar() {
   const [formData, setFormData] = useState();

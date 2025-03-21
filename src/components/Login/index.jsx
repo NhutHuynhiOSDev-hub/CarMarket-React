@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Button } from "../Button";
 import { useAuth } from "@/context";
 import { Input } from "../ui/input";
 import { Link, useNavigate } from "react-router";
 import { doSignInWithEmailAndPassword } from "@/services/firebase/auth";
+import Button from "../Button";
 
 function Login() {
   const navigate = useNavigate();

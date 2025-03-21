@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router";
-import { Button } from "../Button";
 import { Input } from "../ui/input";
+import Button from "../Button";
 
 function ForgotPassword() {
   return (

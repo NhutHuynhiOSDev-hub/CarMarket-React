@@ -1,7 +1,7 @@
 import React from "react";
 import { Input } from "../ui/input";
 import { Link } from "react-router";
-import { Button } from "../Button";
+import Button from "../Button";
 
 function Register() {
   return (

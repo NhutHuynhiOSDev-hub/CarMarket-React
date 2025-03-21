@@ -1,9 +1,9 @@
 import React from "react";
 import Header from "../Header";
+import Inbox from "./components/Inbox";
 import MyProfile from "./components/MyProfile";
 import MyProducts from "./components/MyProducts";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import Inbox from "./components/Inbox";
 
 function Profile() {
   return (

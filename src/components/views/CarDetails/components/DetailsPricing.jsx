@@ -1,6 +1,6 @@
-import { Button } from "@/components/Button";
 import React from "react";
 import { IoPricetag } from "react-icons/io5";
+import Button from "@/components/Button";
 
 function DetailsPricing({ carDetails }) {
   return (

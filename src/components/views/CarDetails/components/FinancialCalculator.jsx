@@ -1,6 +1,7 @@
-import { Button } from "@/components/Button";
-import { Input } from "@/components/ui/input";
 import React, { useState } from "react";
+import Button from "@/components/Button";
+import { Input } from "@/components/ui/input";
+
 function FinancialCalculator({ carDetails }) {
   const [carPrice, setCarPrice] = useState(0);
   const [interestRate, setInterestRate] = useState(0);

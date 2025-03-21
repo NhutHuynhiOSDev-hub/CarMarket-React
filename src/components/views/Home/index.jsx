@@ -10,10 +10,10 @@ function Home() {
   return (
     <div>
       <Header />
-      <Hero />
-      <Categories />
-      <TopSearchedCars />
-      <Info />
+      {/* <Hero /> */}
+      {/* <Categories /> */}
+      {/* <TopSearchedCars /> */}
+      {/* <Info /> */}
       <Footer />
     </div>
   );
