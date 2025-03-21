@@ -22,7 +22,7 @@ function Footer() {
 
               <a
                 href="#"
-                className="block text-2xl font-medium text-white hover:opacity-75 sm:text-3xl"
+                className="block text-2xl font-medium text-white hover:opacity-75 transition-all cursor-pointer sm:text-3xl"
               >
                 0123456789
               </a>
@@ -152,102 +152,39 @@ function Footer() {
             </ul>
           </div>
 
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div className="grid grid-cols-2 gap-4">
             <div>
               <p className="font-medium text-white">Services</p>
-
               <ul className="mt-6 space-y-4 text-sm">
-                <li>
-                  <a
-                    href="#"
-                    className="text-white transition hover:opacity-75"
-                  >
-                    {" "}
-                    Schedule A Drive{" "}
-                  </a>
+                <li className="text-white font-medium  hover:opacity-75 transition-all cursor-pointer">
+                  Sell Your Car
                 </li>
-
-                <li>
-                  <a
-                    href="#"
-                    className="text-white transition hover:opacity-75"
-                  >
-                    {" "}
-                    Detailing{" "}
-                  </a>
+                <li className="text-white font-medium  hover:opacity-75 transition-all cursor-pointer">
+                  Find A Car
                 </li>
-
-                <li>
-                  <a
-                    href="#"
-                    className="text-white transition hover:opacity-75"
-                  >
-                    {" "}
-                    Paint Correction{" "}
-                  </a>
+                <li className="text-white font-medium  hover:opacity-75 transition-all cursor-pointer">
+                  Car Valuation
                 </li>
-
-                <li>
-                  <a
-                    href="#"
-                    className="text-white transition hover:opacity-75"
-                  >
-                    {" "}
-                    Cermaic Coating{" "}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-white transition hover:opacity-75"
-                  >
-                    {" "}
-                    Window Tinting{" "}
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="#"
-                    className="text-white transition hover:opacity-75"
-                  >
-                    {" "}
-                    Interior Cleaning{" "}
-                  </a>
+                <li className="text-white font-medium hover:opacity-75 transition-all cursor-pointer">
+                  Financing Options
                 </li>
               </ul>
             </div>
 
             <div>
               <p className="font-medium text-white">Company</p>
-
               <ul className="mt-6 space-y-4 text-sm">
-                <li>
-                  <a
-                    href="#"
-                    className="text-white transition hover:opacity-75"
-                  >
-                    {" "}
-                    About{" "}
-                  </a>
+                <li className="text-white font-medium hover:opacity-75 transition-all cursor-pointer">
+                  About Us
                 </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-white transition hover:opacity-75"
-                  >
-                    {" "}
-                    Careers{" "}
-                  </a>
+                <li className="text-white font-medium hover:opacity-75 transition-all cursor-pointer">
+                  Careers
                 </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-white transition hover:opacity-75"
-                  >
-                    {" "}
-                    Contact Us{" "}
-                  </a>
+                <li className="text-white font-medium hover:opacity-75 transition-all cursor-pointer">
+                  Contact Us
+                </li>
+                <li className="text-white font-medium hover:opacity-75 transition-all cursor-pointer">
+                  FAQs
                 </li>
               </ul>
             </div>
@@ -258,14 +195,20 @@ function Footer() {
           <div className="sm:flex sm:items-center sm:justify-between">
             <ul className="flex flex-wrap gap-4 text-xs">
               <li>
-                <a href="#" className="text-white transition hover:opacity-75">
+                <a
+                  href="#"
+                  className="text-white hover:opacity-75 transition-all cursor-pointer"
+                >
                   {" "}
                   Terms & Conditions{" "}
                 </a>
               </li>
 
               <li>
-                <a href="#" className="text-white transition hover:opacity-75">
+                <a
+                  href="#"
+                  className="text-white hover:opacity-75 transition-all cursor-pointer"
+                >
                   {" "}
                   Privacy Policy{" "}
                 </a>
@@ -273,7 +216,7 @@ function Footer() {
             </ul>
 
             <p className="mt-8 text-xs text-gray-500 sm:mt-0">
-              &copy; 2022. Company Name. All rights reserved.
+              &copy; 2024. NhutQH. All rights reserved.
             </p>
           </div>
         </div>
