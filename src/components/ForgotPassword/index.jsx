@@ -5,7 +5,7 @@ import { Button } from "../ui/button";
 
 function ForgotPassword() {
   return (
-    <div className="w-full h-full bg-black">
+    <div className="w-full h-screen bg-black">
       <div className="absolute mt-5 ml-20">
         <Link to={"/"}>
           <img src="vite.svg" className="logo" alt="logo" />
@@ -34,7 +34,7 @@ function ForgotPassword() {
             />
             <Button
               className={
-                "font-medium w-full h-[40px] text-sm hover:bg-gray-900 transition-all duration-300 text-white bg-[#1a1a1a]"
+                "font-medium w-full h-[40px] text-sm hover:bg-teal-900 transition-all duration-300 text-white bg-[#1a1a1a]"
               }
             >
               Submit

@@ -1,13 +1,14 @@
-import Header from "@/components/Header";
 import { DummyCarDetails } from "@/data/FakerData";
+
 import React from "react";
-import DetailsHeader from "../components/DetailsHeader";
+import Header from "@/components/Header";
 import DetailsImage from "../components/DetailsImage";
-import DetailsDescription from "../components/DetailsDescription";
-import DetailsFeatures from "../components/DetailsFeatures";
+import DetailsHeader from "../components/DetailsHeader";
 import DetailsPricing from "../components/DetailsPricing";
-import CarSpecification from "../components/CarSpecification";
 import DetailsCarOwner from "../components/DetailsCarOwner";
+import DetailsFeatures from "../components/DetailsFeatures";
+import CarSpecification from "../components/CarSpecification";
+import DetailsDescription from "../components/DetailsDescription";
 import FinancialCalculator from "../components/FinancialCalculator";
 
 function CarDetails() {
@@ -16,7 +17,7 @@ function CarDetails() {
   return (
     <div className="w-full h-full bg-black">
       <Header />
-      <div className="py-10 px-10 md:px-20">
+      <div className="pb-20 pt-[140px] px-10 md:px-20">
         <DetailsHeader carDetails={carDetails[0]} />
         <div className="grid w-full grid-cols-1 md:grid-cols-3 gap-5 md:gap-10">
           <div className="col-span-2">

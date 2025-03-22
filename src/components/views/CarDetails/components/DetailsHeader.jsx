@@ -6,7 +6,7 @@ import { TbManualGearboxFilled } from "react-icons/tb";
 
 function DetailsHeader({ carDetails }) {
   return (
-    <section className="w-full h-full bg-black pb-5 pt-20">
+    <section className="w-full h-full bg-black mb-10">
       {carDetails.name ? (
         <div>
           <div className="mb-10">

@@ -29,7 +29,7 @@ function DesktopNav() {
           <Link to="/profile">
             <Button
               className={
-                "font-medium w-full h-[40px] text-sm hover:bg-gray-900 transition-all duration-300 text-white bg-[#1a1a1a]"
+                "font-medium h-[40px] text-sm hover:bg-teal-900 transition-all duration-300 text-white bg-[#1a1a1a] my-10"
               }
             >
               My Profile
@@ -39,7 +39,7 @@ function DesktopNav() {
           <Link to="/login">
             <Button
               className={
-                "font-medium w-full h-[40px] text-sm hover:bg-gray-900 transition-all duration-300 text-white bg-[#1a1a1a]"
+                "font-medium h-[40px] text-sm hover:bg-teal-900 transition-all duration-300 text-white bg-[#1a1a1a] my-10"
               }
             >
               Login

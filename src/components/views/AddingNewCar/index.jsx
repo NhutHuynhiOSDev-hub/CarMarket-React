@@ -1,15 +1,14 @@
 import React, { useState } from "react";
+import { Separator } from "@/components/ui/separator";
+
 import Header from "@/components/Header";
 import TextArea from "../../Fields/TextArea";
 import InputField from "../../Fields/InputField";
-import DropdownField from "../../Fields/DropdownField";
 import Features from "../../../data/Features.json";
-import FormElements from "../../../data/FormElements.json";
-
-import { Checkbox } from "@/components/ui/checkbox";
-import { Separator } from "@/components/ui/separator";
 import UploadImages from "./components/UploadImages";
-import Button from "@/components/Button";
+import DropdownField from "../../Fields/DropdownField";
+import FormElements from "../../../data/FormElements.json";
+import { Button } from "@/components/ui/button";
 
 function AddNewCar() {
   const [formData, setFormData] = useState();
@@ -24,9 +23,9 @@ function AddNewCar() {
   };
 
   return (
-    <div>
+    <div className="w-full h-full bg-black">
       <Header />
-      <div className="p-10">
+      <div className="pb-20 pt-[140px] px-10 md:px-20">
         <h2 className="font-bold text-4xl">Add New Car</h2>
         <form className="p-10 border rounded-md mt-10">
           {/* Car details */}
@@ -69,7 +68,10 @@ function AddNewCar() {
                   key={index}
                   className="flex flex-row items-center justify-start gap-2"
                 >
-                  <Checkbox />
+                  <input
+                    className="accent-teal-900 hover:accent-white w-4 h-4"
+                    type="checkbox"
+                  />
                   <h2>{item?.label}</h2>
                 </div>
               ))}
@@ -78,9 +80,12 @@ function AddNewCar() {
           {/* Car image */}
           <Separator className="bg-gray-400 my-8" />
           <UploadImages triggerUploadFeatureImage={triggerUploadFeatureImage} />
-          <div className="my-10 flex justify-end">
+          <div className="flex justify-start">
             <Button
               // type="submit"
+              className={
+                "font-medium h-[40px] w-full md:w-1/2 text-sm hover:bg-teal-900 transition-all duration-300 text-white bg-[#1a1a1a] my-10"
+              }
               onClick={(e) => {
                 onSubmit(e);
               }}

@@ -3,7 +3,7 @@ import { CarCategories } from "@/data/Data";
 import { Link } from "react-router";
 function Categories() {
   return (
-    <div className="w-fullbg-black px-10 md:px-20">
+    <div className="w-full bg-black px-10 md:px-20">
       <h2 className="font-bold text-3xl text-center my-20">
         Browse by categories
       </h2>

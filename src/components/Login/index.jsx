@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useAuth } from "@/context";
 import { Input } from "../ui/input";
+import { Button } from "../ui/button";
 import { Link, useNavigate } from "react-router";
 import { doSignInWithEmailAndPassword } from "@/services/firebase/auth";
-import { Button } from "../ui/button";
 
 function Login() {
   const navigate = useNavigate();
@@ -33,7 +33,7 @@ function Login() {
   };
 
   return (
-    <div className="w-full h-full bg-black">
+    <div className="w-full h-screen bg-black">
       <div className="absolute mt-5 ml-20">
         <Link to={"/"}>
           <img src="vite.svg" className="logo" alt="logo" />
@@ -73,7 +73,7 @@ function Login() {
             <Button
               onClick={onSubmit}
               className={
-                "font-medium w-full h-[40px] text-sm hover:bg-gray-900 transition-all duration-300 text-white bg-[#1a1a1a]"
+                "font-medium h-[40px] text-sm hover:bg-teal-900 transition-all duration-300 text-white bg-[#1a1a1a] my-10"
               }
             >
               Login

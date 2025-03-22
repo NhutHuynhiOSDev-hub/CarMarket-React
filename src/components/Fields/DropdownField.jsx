@@ -19,7 +19,11 @@ function DropdownField({ item, handleInputChange }) {
         </SelectTrigger>
         <SelectContent className="bg-[#1a1a1a] border-none">
           {item?.options?.map((option, index) => (
-            <SelectItem key={index} value={option}>
+            <SelectItem
+              key={index}
+              value={option}
+              className={"hover:bg-teal-900 transition-all duration-300"}
+            >
               {option}
             </SelectItem>
           ))}

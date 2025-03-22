@@ -45,12 +45,12 @@ const UploadImages = ({ triggerUploadFeatureImage }) => {
 
   return (
     <div>
-      <h2 className="font-medium text-3xl mb-4">Upload Car Images</h2>
+      <h2 className="font-medium text-3xl mb-10">Upload Car Images</h2>
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-5">
         {selectedFiles?.map((item, index) => (
           <div key={index}>
             <IoCloseCircle
-              className="absolute font-medium text-lg m-2 text-white"
+              className="absolute font-medium text-lg m-2 text-white hover:text-gray-900 transition-all duration-300"
               onClick={() => {
                 onImageRemove(index);
               }}
@@ -62,7 +62,7 @@ const UploadImages = ({ triggerUploadFeatureImage }) => {
           </div>
         ))}
         <label htmlFor="uploadImages">
-          <div className="w-full h-[130px] rounded-xl border-[#343131] bg-black flex items-center justify-center cursor-pointer hover:shadow">
+          <div className="w-full h-[130px] rounded-xl border-[#343131] bg-[#343131] flex items-center justify-center cursor-pointer hover:shadow">
             <h2 className="text-lg font-bold text-center">+</h2>
           </div>
         </label>

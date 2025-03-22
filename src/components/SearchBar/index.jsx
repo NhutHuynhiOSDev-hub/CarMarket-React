@@ -22,9 +22,19 @@ function SearchBar() {
         <SelectTrigger className="w-full text-lg shadow-none border-2 border-white md:border-none">
           <SelectValue placeholder="Cars" />
         </SelectTrigger>
-        <SelectContent className="bg-[#1a1a1a] border-none">
-          <SelectItem value={true}>New</SelectItem>
-          <SelectItem value={false}>Used</SelectItem>
+        <SelectContent className="bg-[#1a1a1a] border-non">
+          <SelectItem
+            value={true}
+            className={"hover:bg-teal-900 transition-all duration-300"}
+          >
+            New
+          </SelectItem>
+          <SelectItem
+            value={false}
+            className={"hover:bg-teal-900 transition-all duration-300"}
+          >
+            Used
+          </SelectItem>
         </SelectContent>
       </Select>
       <Select onValueChange={(value) => setBrand(value)}>
@@ -33,7 +43,11 @@ function SearchBar() {
         </SelectTrigger>
         <SelectContent className="bg-[#1a1a1a] border-none">
           {CarModel.map((item, index) => (
-            <SelectItem key={index} value={item.brand}>
+            <SelectItem
+              key={index}
+              value={item.brand}
+              className={"hover:bg-teal-900 transition-all duration-300"}
+            >
               {item.brand}
             </SelectItem>
           ))}
@@ -45,7 +59,11 @@ function SearchBar() {
         </SelectTrigger>
         <SelectContent className="bg-[#1a1a1a] border-none">
           {Pricing.map((item, index) => (
-            <SelectItem key={index} value={item.amount}>
+            <SelectItem
+              key={index}
+              value={item.amount}
+              className={"hover:bg-teal-900 transition-all duration-300"}
+            >
               {"$" + item.amount}
             </SelectItem>
           ))}

@@ -1,8 +1,8 @@
 import React from "react";
 
 import { useAuth } from "@/context";
-import Button from "@/components/Button";
 import { doSignOut } from "@/services/firebase/auth";
+import { Button } from "@/components/ui/button";
 
 function MyProfile() {
   const { currentUser } = useAuth();
@@ -10,7 +10,7 @@ function MyProfile() {
     doSignOut();
   };
   return (
-    <div className="mt-10 flex items-center justify-end">
+    <div className="w-full h-full bg-black mt-10 flex items-center justify-end">
       <Button>Edit Profile</Button>
     </div>
   );
