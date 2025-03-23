@@ -1,11 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
 import { Input } from "../ui/input";
-import { Link } from "react-router";
 import { Button } from "../ui/button";
+import { Link, useNavigate } from "react-router";
+import { doCreateUserWithEmailAnPassword } from "@/services/firebase/auth";
 
 function Register() {
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  const handleInputChange = (name, value) => {
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const onSubmit = () => {
+    if (
+      formData &&
+      formData.fullName &&
+      formData.email &&
+      formData.password &&
+      formData.confirmPassword
+    ) {
+      if (checkSamePassword() && !isLoading) {
+        setIsLoading(true);
+        doCreateUserWithEmailAnPassword(formData.email, formData.password)
+          .then(() => {
+            navigate("/login");
+          })
+          .catch((error) => {
+            setIsLoading(false);
+            setErrorMessage(errorMessage);
+            console.log("LOGIN ERROR:", error);
+          });
+      } else {
+        console.log("NOT SAME PASSWORD");
+        setIsLoading(false);
+      }
+    } else {
+      setIsLoading(false);
+      console.log("EMPTY");
+    }
+  };
+
+  const checkSamePassword = () => {
+    return formData.password === formData.confirmPassword;
+  };
+
   return (
-    <div className="w-full h-screen bg-black">
+    <div className="w-full h-full bg-black">
       <div className="absolute mt-5 ml-20">
         <Link to={"/"}>
           <img src="vite.svg" className="logo" alt="logo" />
@@ -30,7 +72,7 @@ function Register() {
               className={
                 "w-full h-[40px] text-white bg-black border-gray-400 border-1 outline-none focus:bg-gray-900"
               }
-              // onChange={(e) => handleInputChange(item?.name, e.target.value)}
+              onChange={(e) => handleInputChange("fullName", e.target.value)}
             />
             <Input
               name="email"
@@ -40,7 +82,7 @@ function Register() {
               className={
                 "w-full h-[40px] text-white bg-black border-gray-400 border-1 outline-none focus:bg-gray-900"
               }
-              // onChange={(e) => handleInputChange(item?.name, e.target.value)}
+              onChange={(e) => handleInputChange("email", e.target.value)}
             />
             <Input
               name="password"
@@ -50,7 +92,7 @@ function Register() {
               className={
                 "w-full h-[40px] text-white bg-black border-gray-400 border-1 outline-none focus:bg-gray-900"
               }
-              // onCshange={(e) => handleInputChange(item?.name, e.target.value)}
+              onChange={(e) => handleInputChange("password", e.target.value)}
             />
 
             <Input
@@ -61,12 +103,15 @@ function Register() {
               className={
                 "w-full h-[40px] text-white bg-black border-gray-400 border-1 outline-none focus:bg-gray-900"
               }
-              // onCshange={(e) => handleInputChange(item?.name, e.target.value)}
+              onChange={(e) =>
+                handleInputChange("confirmPassword", e.target.value)
+              }
             />
             <Button
               className={
                 "font-medium w-full h-[40px] text-sm hover:bg-teal-900 transition-all duration-300 text-white bg-[#1a1a1a]"
               }
+              onClick={onSubmit}
             >
               Register
             </Button>

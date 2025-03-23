@@ -74,6 +74,7 @@ export {
   setDoc,
   getDocs,
   signOut,
+  getAuth,
   deleteDoc,
   updateDoc,
   collection,

@@ -1,9 +1,43 @@
-import React from "react";
-import { Link } from "react-router";
+import React, { useState } from "react";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
+import { Link, useNavigate } from "react-router";
+import { doPasswordReset } from "@/services/firebase/auth";
 
 function ForgotPassword() {
+  const navigate = useNavigate();
+
+  const [email, setEmail] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleInputChange = (value) => {
+    setEmail(value);
+  };
+
+  const onSubmit = () => {
+    if (email && checkEmail() && !isLoading) {
+      setIsLoading(true);
+      doPasswordReset(email)
+        .then(() => {
+          navigate("/login");
+        })
+        .catch((error) => {
+          setIsLoading(false);
+          setErrorMessage(errorMessage);
+          console.log("LOGIN ERROR:", error);
+        });
+    } else {
+      setIsLoading(false);
+      console.log("EMPTY");
+    }
+  };
+
+  const checkEmail = () => {
+    return true;
+    // return formData.password === formData.confirmPassword;
+  };
+
   return (
     <div className="w-full h-screen bg-black">
       <div className="absolute mt-5 ml-20">
@@ -30,12 +64,13 @@ function ForgotPassword() {
               className={
                 "w-full h-[40px] text-white bg-black border-gray-400 border-1 outline-none focus:bg-gray-900"
               }
-              // onChange={(e) => handleInputChange(item?.name, e.target.value)}
+              onChange={(e) => handleInputChange(e.target.value)}
             />
             <Button
               className={
                 "font-medium w-full h-[40px] text-sm hover:bg-teal-900 transition-all duration-300 text-white bg-[#1a1a1a]"
               }
+              onClick={onSubmit}
             >
               Submit
             </Button>

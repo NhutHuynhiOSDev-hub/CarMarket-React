@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router";
-import { useAuth } from "@/context";
 import { motion } from "motion/react";
 import { IoMenu } from "react-icons/io5";
+import { useAuth } from "@/context/Auth";
 import { IoClose } from "react-icons/io5";
 import { Button } from "@/components/ui/button";
 

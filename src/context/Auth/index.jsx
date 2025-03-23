@@ -16,11 +16,11 @@ function AuthProvider({ children }) {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(firebaseAuth, initialUser);
     return unsubscribe;
-  });
+  }, []);
 
   async function initialUser(user) {
     if (user) {
-      setCurrentUser({ ...user });
+      setCurrentUser({ user });
       setUserLoggedIn(true);
     } else {
       setCurrentUser(null);

@@ -1,14 +1,7 @@
 import "./App.css";
 import routes from "./router";
-import AuthProvider from "./context";
+import AuthProvider from "./context/Auth";
 import { RouterProvider } from "react-router";
-
-// const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
-
-// if (!PUBLISHABLE_KEY) {
-//   throw new Error("Missing Publishable Key");
-// }
-
 function App() {
   return (
     <AuthProvider>

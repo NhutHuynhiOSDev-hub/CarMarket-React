@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useAuth } from "@/context";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import { Link, useNavigate } from "react-router";
@@ -7,33 +6,45 @@ import { doSignInWithEmailAndPassword } from "@/services/firebase/auth";
 
 function Login() {
   const navigate = useNavigate();
-  const { userLoggedIn } = useAuth();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  // const [isSignIn, setIsSignIn] = useState(false);
-  // const [errorMessage, setErrorMessage] = useState("");
+  const [formData, setFormData] = useState(null);
+  const [isSignIn, setIsSignIn] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const onSubmit = async () => {
-    console.log("EMAIL:", email);
-    console.log("PASSWORD:", password);
-    // if (!isSignIn) {
-    //   setIsSignIn(true);
-    //   doSignInWithEmailAndPassword(email, password).then(() => {});
-    // }
-
-    // const onSignInwithGoogle = async (e) => {
-    //   e.preventDefault();
-    //   if (!isSignIn) {
-    //     setIsSignIn(true);
-    //     doSignInWithGoogle().catch((error) => {
-    //       setErrorMessage(error);
-    //       console.error("Error signing in with Google:", error);
-    //     });
-    //   }
+  const handleInputChange = (name, value) => {
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+    console.log("SET FORM DATA:", formData);
   };
 
+  const onSubmit = async () => {
+    if (formData && formData.email && formData.password && !isSignIn) {
+      setIsSignIn(true);
+      doSignInWithEmailAndPassword(formData.email, formData.password)
+        .then(() => {
+          navigate("/");
+        })
+        .catch((error) => {
+          setIsSignIn(false);
+          setErrorMessage(errorMessage);
+          console.log("LOGIN ERROR:", error);
+        });
+    } else {
+      console.log("EMPTY");
+    }
+  };
+
+  // const onSignInwithGoogle = async (e) => {
+  //   e.preventDefault();
+  //   if (!isSignIn) {
+  //     setIsSignIn(true);
+  //     doSignInWithGoogle().catch((error) => {
+  //       setErrorMessage(error);
+  //       console.error("Error signing in with Google:", error);
+  //     });
+  //   }
+  // };
+
   return (
-    <div className="w-full h-screen bg-black">
+    <div className="w-full h-full bg-black">
       <div className="absolute mt-5 ml-20">
         <Link to={"/"}>
           <img src="vite.svg" className="logo" alt="logo" />
@@ -58,7 +69,7 @@ function Login() {
               className={
                 "w-full h-[40px] text-white bg-black  border-gray-400 border-1 outline-none focus:bg-gray-900"
               }
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => handleInputChange("email", e.target.value)}
             />
             <Input
               name="password"
@@ -68,7 +79,7 @@ function Login() {
               className={
                 "w-full h-[40px] text-white bg-black border-gray-400 border-1 outline-none focus:bg-gray-900"
               }
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={(e) => handleInputChange("password", e.target.value)}
             />
             <Button
               onClick={onSubmit}

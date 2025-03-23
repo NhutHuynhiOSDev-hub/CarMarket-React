@@ -1,5 +1,6 @@
 import {
   signOut,
+  getAuth,
   firebaseAuth,
   updatePassword,
   signInWithPopup,
@@ -26,7 +27,8 @@ export const doSignInWithGoogle = async () => {
 };
 
 export const doSignOut = async () => {
-  return signOut();
+  const auth = getAuth();
+  return signOut(auth);
 };
 
 export const doVerifyEmail = async (email) => {

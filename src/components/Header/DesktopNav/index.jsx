@@ -1,8 +1,8 @@
 import React from "react";
 
-import { useAuth } from "@/context";
 import { Link } from "react-router";
 import { Button } from "@/components/ui/button";
+import { useAuth } from "@/context/Auth";
 
 function DesktopNav() {
   const { userLoggedIn } = useAuth();
