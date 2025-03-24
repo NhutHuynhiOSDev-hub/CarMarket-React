@@ -13,6 +13,7 @@ import {
   createRoutesFromElements,
 } from "react-router";
 import CarDetails from "@/components/views/CarDetails/[id]";
+import Protected from "./Protected";
 
 const routes = createBrowserRouter(
   createRoutesFromElements(
@@ -20,9 +21,23 @@ const routes = createBrowserRouter(
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/contact" element={<Contact />} />
-      <Route path="/profile" element={<Profile />} />
+      <Route
+        path="/profile"
+        element={
+          <Protected>
+            <Profile />
+          </Protected>
+        }
+      />
       <Route path="/register" element={<Register />} />
-      <Route path="/add-new-car" element={<AddNewCar />} />
+      <Route
+        path="/add-new-car"
+        element={
+          <Protected>
+            <AddNewCar />
+          </Protected>
+        }
+      />
       <Route path="/search/" element={<SearchByOptions />} />
       <Route path="/car/:car_id" element={<CarDetails />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
