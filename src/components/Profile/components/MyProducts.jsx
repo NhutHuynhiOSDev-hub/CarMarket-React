@@ -5,9 +5,15 @@ import { Link } from "react-router";
 
 function MyProducts() {
   return (
-    <div className="w-full h-full bg-black py-20 px-10 md:px-20 flex items-center justify-end">
+    <div className="flex items-center justify-end">
       <Link to={"/add-new-car"}>
-        <Button>+ Add New Product</Button>
+        <Button
+          className={
+            "font-medium h-[40px] text-sm hover:bg-white hover:text-black transition-all duration-300 text-white bg-[#1a1a1a] my-10"
+          }
+        >
+          + Add New Product
+        </Button>
       </Link>
     </div>
   );

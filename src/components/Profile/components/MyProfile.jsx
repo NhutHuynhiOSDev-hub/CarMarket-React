@@ -17,17 +17,17 @@ function MyProfile() {
       });
   };
   return (
-    <div className="w-full h-full bg-black mt-10 flex items-center justify-end">
+    <div className="w-full h-full bg-black mt-10 flex items-center justify-end gap-5">
       <Button
         className={
-          "font-medium h-[40px] text-sm hover:bg-teal-900 transition-all duration-300 text-white bg-[#1a1a1a] my-10"
+          "font-medium h-[40px] text-sm hover:bg-white hover:text-black transition-all duration-300 text-white bg-[#1a1a1a] my-10"
         }
       >
         Edit Profile
       </Button>
       <Button
         className={
-          "font-medium h-[40px] text-sm hover:bg-teal-900 transition-all duration-300 text-white bg-[#1a1a1a] my-10"
+          "font-medium h-[40px] text-sm hover:bg-white hover:text-black transition-all duration-300 text-white bg-[#1a1a1a] my-10"
         }
       >
         Change Password
@@ -35,7 +35,7 @@ function MyProfile() {
       <Button
         onClick={onLogout}
         className={
-          "font-medium h-[40px] text-sm hover:bg-teal-900 transition-all duration-300 text-white bg-[#1a1a1a] my-10"
+          "font-medium h-[40px] text-sm hover:bg-white hover:text-black transition-all duration-300 text-white bg-[#1a1a1a] my-10"
         }
       >
         Logout

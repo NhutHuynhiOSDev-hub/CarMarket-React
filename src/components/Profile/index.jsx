@@ -12,7 +12,9 @@ function Profile() {
       <Header />
       <div className="pb-20 pt-[140px] px-10 md:px-20">
         <Tabs>
-          <TabList>
+          <TabList
+            className={"gap-5 py-5 font-medium transition-all duration-300"}
+          >
             <Tab>My Products</Tab>
             <Tab>My Profile</Tab>
             <Tab>Inbox</Tab>
